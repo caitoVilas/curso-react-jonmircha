@@ -1,5 +1,6 @@
 import { Component } from "react";
 
+
 export class EventosEs7 extends Component{
 
     state = {
@@ -66,3 +67,30 @@ export  class EventosEs6 extends Component{
         )
     }
 }
+
+export class MasSobreEventos extends Component{
+
+    handleClick = (e,message) => {
+        console.log(e)
+        console.log(e.target)
+        console.log(e.nativeEvent.target)
+        console.log(message)
+    }
+
+    render(){
+        return(
+            <div>
+                <h2>Mas sobre Eventos</h2>
+                <button onClick={(e) => this.handleClick(e, "Hola a todos")}>Saludar</button>
+                {/* Evento personalizado */}
+                <MiBoton miOnClick={(e) => this.handleClick(e, "Hola desde un componente boton")} />
+            </div>
+        )
+    }
+}
+
+function MiBoton(props){
+    return(
+       <button onClick={props.miOnClick}>Mi Boton</button>
+    )
+    }    
