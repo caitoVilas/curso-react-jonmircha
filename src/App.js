@@ -3,6 +3,9 @@ import './App.css';
 import Componente from './components/Componente';
 import Propiedades from './components/Propiedades';
 import Estado from './components/Estado';
+import RenderizadoCondicional from './components/RenderizadoCondicional';
+import RenderizadoElementos from './components/RenderizadoElementos';
+import {EventosEs6, EventosEs7} from './components/Eventos';
 
 function App() {
   let nombre = "Caito"
@@ -42,6 +45,14 @@ function App() {
                 componenteReact= {<Componente msg="componente pasado como prop" />} />
           <hr />
           <Estado />
+          <hr />
+          <RenderizadoCondicional />
+          <hr />
+          <RenderizadoElementos />
+          <hr />
+          <EventosEs6 />
+          <hr />
+          <EventosEs7 />
         </section>
       </header>
     </div>
